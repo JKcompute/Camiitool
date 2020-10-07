@@ -1,0 +1,5 @@
+module CAmiitool {
+	header "../../Headers/Camiitool-Bridging-Header.h"
+	link "amiitool"
+	export *
+}
