@@ -1,3 +1,6 @@
 [submodule "Sources/amiitool"]
 	path = Sources/amiitool
 	url = https://github.com/JKcompute/amiitool.git
+[submodule "Sources/Camiitool"]
+	path = Sources/Camiitool
+	url = https://github.com/JKcompute/amiitool.git
