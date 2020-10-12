@@ -1,7 +1,7 @@
 import XCTest
 
-import CamiitoolTests
+import amiitoolSwiftTests
 
 var tests = [XCTestCaseEntry]()
-tests += CamiitoolTests.allTests()
+tests += amiitoolSwiftTests.allTests()
 XCTMain(tests)
