@@ -16,7 +16,7 @@ public class Amii {
 	 public func methodJustForTesting() {
 	 	print(someString)
 
-       let cString: UnsafePointer<CChar> = Camiitool.nfc3d_version_fork()
+        let cString: UnsafePointer<CChar> = Camiitool.nfc3d_version_fork()
 
        print(String(cString: cString))
 	 }
