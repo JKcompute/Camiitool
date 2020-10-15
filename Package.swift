@@ -7,10 +7,9 @@ let package = Package(
     name: "CamiitoolPackage",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        // .library(name: "amiitoolLib", targets: ["amiitool", "Camiitool", "mbedtls"]),
         .library(name: "Camiitool", targets: ["Camiitool"]),
         .library(name: "amiitoolSwift", targets: ["amiitoolSwift"]),
-        // .library(name: "amiitoolDynamic", type: .dynamic,  targets: ["amiitool"]),
+        .library(name: "amiitoolSwiftDynamic", type: .dynamic,  targets: ["amiitoolSwift"]),
     ],
     dependencies: [
     ],
@@ -21,11 +20,7 @@ let package = Package(
                "Camiitool"
             ],
             path: "./Sources/amiitoolSwift"
-           //  linkerSettings: [
-           //     .linkedLibrary("Camiitool")
-           // ]
         ),
-
         .target(
             name: "Camiitool",
             dependencies: [ 
@@ -33,34 +28,40 @@ let package = Package(
             ],
             path: "./Sources/Camiitool",
             exclude: [
-                "mbedtls",
-                "LICENSE"
-            ],
-            resources: [
-                .copy("."),
+                "./mbedtls",
+                "./mbedtls/yotta",
+                "./mbedtls/visualc",
+                "./LICENSE",
+                "./amiitool.c",
+                "./README.md",
+                "./Makefile"
             ]
-            // cSettings: [
-                // .headerSearchPath("./mbedtls/include"),
-                // .headerSearchPath("./include")
-                // ]
         ),
         .target(
             name: "mbedtls",
             dependencies: [],
             path: "./Sources/Camiitool/mbedtls",
             exclude: [
-                "./mbedtls/yotta",
-                "./mbedtls/visualc",
-                "LICENSE"
-            ],
-            resources: [
-                .copy("."),
+                "./yotta",
+                "./visualc",
+                "./LICENSE",
+                "./programs",
+                "./tests",
+                "./scripts",
+                "./include/CMakeLists.txt",
+                "./DartConfiguration.tcl",
+                "./doxygen",
+                "./library/Makefile",
+                "./apache-2.0.txt",
+                "./Makefile",
+                "./README.md",
+                "./ChangeLog",
+                "./CMakeLists.txt",
+                "./circle.yml",
+                "./configs/README.txt",
+                "./library/CMakeLists.txt"
             ]
-           // cSettings: [
-           //     .headerSearchPath("./include")
-           //     ]
         ),  
-
         .testTarget(
             name: "amiitoolSwiftTests",
             dependencies: ["amiitoolSwift"]

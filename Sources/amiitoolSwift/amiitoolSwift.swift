@@ -1,6 +1,5 @@
 import Foundation
 import Camiitool
-// import mbedtls
 
 public class Amii {
 	var someString = "test"
@@ -21,8 +20,12 @@ public class Amii {
        print(String(cString: cString))
 	 }
     
-    // public func mbedTest() {
-    //     let testValue = mbedtls.mbedtls_md_list()
-    //     print(testValue)
-    // }
+    public func copyPastaMethod() {
+        let fork = String(cString: Camiitool.nfc3d_version_fork())
+        let build = String(Camiitool.nfc3d_version_build())
+        let commit = String(Camiitool.nfc3d_version_commit())
+        print("fork: \(fork)")
+        print("build: \(build)")
+        print("commit: \(commit)")
+    }
 }
