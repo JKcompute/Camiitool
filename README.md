@@ -1,7 +1,7 @@
 # Camiitool
 
 ## Warning
-This repo is in a work in progress state.  It will build when running `swift build`.  However, when running `swift package generate-xcodeproj`, and then attempting to build the project, we get a Framework Not found error. 
+This repo is in a development state.  It is work in progress and you should expect it to be unstable. 
 
 ## Project Info
 This is an attmept to create a swift wrapper of the C library Amiitool. 
@@ -9,3 +9,7 @@ The intention is to setup the package with amiitool included as submodule, so th
 Since amiitool contains a submodule dependency, this project requires a recursive clone.  
 
 `git clone --recursive-submodules git@github.com:JKcompute/Camiitool.git`
+
+^^ this has not been tested yet.  You also might need to run a make command to generate a file.  This needs to be fixed
+`cd Sources/Camiitool`
+`make gitversion.h`
