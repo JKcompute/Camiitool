@@ -1,7 +1,7 @@
 import XCTest
-@testable import amiitoolSwift
+@testable import AmiitoolSwift
 
-final class amiitoolSwiftTests: XCTestCase {
+final class AmiitoolSwiftTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct

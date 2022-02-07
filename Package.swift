@@ -8,18 +8,18 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(name: "Camiitool", targets: ["Camiitool"]),
-        .library(name: "amiitoolSwift", targets: ["amiitoolSwift"]),
-        .library(name: "amiitoolSwiftDynamic", type: .dynamic,  targets: ["amiitoolSwift"]),
+        .library(name: "AmiitoolSwift", targets: ["AmiitoolSwift"]),
+        .library(name: "AmiitoolSwiftDynamic", type: .dynamic,  targets: ["AmiitoolSwift"]),
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "amiitoolSwift",
+            name: "AmiitoolSwift",
             dependencies: [ 
                "Camiitool"
             ],
-            path: "./Sources/amiitoolSwift"
+            path: "./Sources/AmiitoolSwift"
         ),
         .target(
             name: "Camiitool",
@@ -63,8 +63,8 @@ let package = Package(
             ]
         ),  
         .testTarget(
-            name: "amiitoolSwiftTests",
-            dependencies: ["amiitoolSwift"]
+            name: "AmiitoolSwiftTests",
+            dependencies: ["AmiitoolSwift"]
         )
     ]
 )
